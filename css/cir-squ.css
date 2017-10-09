@@ -1,0 +1,42 @@
+.circle-my-list-text p{
+	width: 8rem;
+}
+.circle-my-list-img{
+	width: 3rem;
+}
+.circle-action{
+	display: table-cell;
+	vertical-align: middle;
+	width: 4.6rem;
+	text-align: center;
+}
+.squ-btn{
+	display: inline-block;
+	width: 3.8rem;
+	color: #6699FF;
+	border: 1px solid #6699FF;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 1.6;
+	text-align: center;
+}
+.joined{
+	font-size: 12px;
+	color:  #999;
+}
+.i-join{
+	display: inline-block;
+	margin-right: 2px;
+	width: 16px;
+	height: 18px;
+	vertical-align: bottom;
+	background: url(../images/i-joincircle.png) no-repeat 0 center/16px auto;
+}
+.i-verify{
+	display: inline-block;
+	margin-right: 2px;
+	width: 16px;
+	height: 18px;
+	vertical-align: bottom;
+	background: url(../images/i-ver.png) no-repeat 0 center/16px auto;
+}

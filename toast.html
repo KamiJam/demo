@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+						/*自定义toast*/
+.cust_toast {
+	display: none;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    /*left: 50%;*/
+    width: auto;
+    font-size: 14px;
+    color: white;
+    /* margin-left: -100px; */
+    /* border: 1px solid #666; */
+    background-color: #1a1a1a;
+    padding: 8px;
+    text-align: center;
+    opacity: .9;
+    border-radius: 4px;
+    /* box-shadow: 2px 2px 1px #1a1a1a; */
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+}
+		</style>
+	</head>
+	<body>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+
+//非模态框
+$.showToast = function(message,period,func) {
+	
+	period = period || 1650;
+	var alert = document.getElementById("toast");
+	
+	if(alert)return;
+	if (alert == null) {
+		var toastHTML = '<div id="toast" class="cust_toast">' + message + '</div>';
+		document.body.insertAdjacentHTML('beforeEnd', toastHTML);
+		
+		var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+			console.log(document.getElementById("toast").clientWidth);
+			
+		document.getElementById("toast").style.opacity = 0;
+		document.getElementById("toast").style.display = "block";
+		document.getElementById("toast").style.left = w/2-document.getElementById("toast").clientWidth/2 + "px";
+		
+		document.getElementById("toast").style.opacity = 0.9;
+	}
+	
+	setTimeout(function() {
+		var alert = document.getElementById("toast");
+		alert.style.opacity = 0;
+		alert.parentNode.removeChild(alert);
+		if(func&&typeof(func)=="function")
+			func.call(null);
+	}, period);
+	
+}
+$.showToast("asdasd");
+		</script>
+	</body>
+</html>

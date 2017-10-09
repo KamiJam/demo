@@ -1,0 +1,56 @@
+.mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	
+}
+.m-box{
+	width: 12rem;
+	height: 100%;
+	margin: 4rem auto;
+}
+.mb-top{
+	overflow: hidden;
+	width: 12rem;
+	height: 15.75rem;
+	background: url(../images/mb-bg.png) no-repeat center top/contain;
+}
+.mbt-title{
+	color: white;
+	font-size: 16px;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.mbt-info{	
+    margin: 1.5rem 0 1rem 0;
+	padding: 0 20px;
+	font-size: 14px;
+	color: #333;
+}
+.qrcode-box{
+	margin:  0 auto;
+	width: 5.5rem;
+	height: 5.5rem;
+	background: url(../images/qrcode-bg.png) no-repeat center top/contain;
+}
+.qrcode-box img{
+	margin: 0.5rem 0.5rem;
+	width: 4.5rem;
+	height: 4.5rem;
+}
+.mbt-tag{
+	margin: 0.5rem 0 0 0;
+	text-align: center;
+	font-size: 12px;
+	color: #5494A7;
+	letter-spacing: 2px;
+}
+.mb-close{
+	margin: 1.5rem auto 0 auto;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url(../images/mb-close.png) no-repeat center top/contain;
+}

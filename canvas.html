@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	<canvas id="canvasId" width="1000" height="1000" style="background-color: #ccc;"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvasId");
+		var ctx = canvas.getContext("2d");
+		var img = new Image();
+		img.src = "images/3.jpg";
+		img.onload = function (){
+			
+			var img_w = img.width;
+			var img_h = img.height;
+			
+			var canvas_w = canvas.width ;
+	        var canvas_h = canvas.height;
+	        
+		    ctx.save();//保存状态
+		    ctx.translate(canvas_w/2,canvas_h/2);//设置画布上的(0,0)位置，也就是旋转的中心点
+		    ctx.rotate(90*Math.PI/180);
+		    ctx.drawImage(img,0,0,img_w,img_h,-canvas_h/2,(canvas_w/2-img_h),img_w,img_h);//把图片绘制在旋转的中心点，
+		    ctx.restore();//恢复状态
+		}
+	</script>
+</body>
+</html>

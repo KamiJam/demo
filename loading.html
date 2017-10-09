@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport"
+	          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	    <meta http-equiv="Pragma" content="no-cache" />
+	    <meta http-equiv="Expires" content="0" />
+	    <meta name="format-detection" content="telephone=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/loading.css"/>
+	</head>
+	<body>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			function addloading(){
+				var html = '<div class="zhezhaobg" id="loadingzhezhao" style="display: none;"><div class="zhezhaoColor"></div><div class="zhezhaoDiv"><div class="TipDivBg" style="background: none;"></div><div class="TipText"><div class="spinner"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div></div></div></div>';
+				if(!document.getElementById("loadingzhezhao"))
+				$("body").append(html);
+			}
+			function showloading(){
+				addloading();
+				$("#loadingzhezhao").show();
+			}
+			function hideloading(){
+				if($("#loadingzhezhao")){
+					$("#loadingzhezhao").hide();
+				}
+				if($("#loadingzhezhao2")){
+					$("#loadingzhezhao2").hide();
+				}
+			}
+			showloading();
+		</script>
+	</body>
+</html>

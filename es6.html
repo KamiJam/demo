@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = [];
+			for(var i = 0; i < 10; i++) {
+				(function(i) {
+					a[i] = function(){
+						console.log(i);
+					}
+				})(i);
+			}
+			a[1]();
+			
+			function* helloWorldGenerator() {
+			  yield 'hello';
+			  yield 'world';
+			  return 'ending';
+			}
+			
+			var hw = helloWorldGenerator();
+			console.log(hw.next());
+			
+		</script>
+	</body>
+</html>

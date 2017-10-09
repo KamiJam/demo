@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<textarea>55445544545</textarea>
+		<button id="test">clear</button>
+		<button id="add">add</button>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			$("#test").on("click",function(){
+				$("textarea").val("");
+			});
+			$("#add").on("click",function(){
+				var temp = $("textarea").val() + "add";
+				$("textarea").val(temp);
+				console.log($("textarea").val());
+			});
+		</script>
+	</body>
+</html>

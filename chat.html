@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <title>酒圈在线</title>
+    <style>
+        img{  vertical-align: middle  }
+        .lefter img{border-radius:50%;width:30px;height:30px;margin-right:10px;margin-left:5px;  }
+        ul{list-style-type:none;margin:0;padding:0;  }
+        li{margin-bottom:10px;padding:5px;background: #fff;border-bottom: 1px solid #dfdfdf; box-sizing: border-box;  }
+        body{  min-width:800px;  margin: 0 auto;  background: #f1f1f1;  color:#333;  font-size: 14px;  }
+        .lefter{      box-sizing: border-box;  border-right: 1px solid #dfdfdf;  float:left;  width:20%;position: fixed;top: 0;left: 0;overflow-y: auto;height: 100%;  background: #f1f1f1;z-index: 1;}
+        .righter{ box-sizing: border-box; float:left;  width:80%;  margin-left: 20%;  }
+        .header{ z-index: 1; position: fixed; left: 20%; right: 0; margin:0px;  background: #fff;  height:41px;  line-height:40px;   border-bottom: 1px solid #dfdfdf;  box-sizing: border-box;  text-align: center;  }
+        .message{  padding: 45px 20px 65px;   }
+        .time{  color:#999;  padding:5px;  text-align: center;  font-size:12px;  }
+        .footer{  position: fixed;  bottom: 0;  height:60px;  background-color:#fff;  border-top: 1px solid #ddd;  left: 20%; right: 0; }
+        .footer img{ float: left; margin-left:10px;  width:30px; margin-top: 20px; }
+        /*.footer textarea{ resize: none; width:56%;  height:20px;  padding:10px;  margin:10px;  border-radius: 5px;  border:1px solid #ddd;  vertical-align:middle;  font-size:14px;  }*/
+        .footer span{float: right;  color:#fff; padding:10px 30px;  text-align:center;  background-color:#ddd;  border-radius: 5px;      margin-top: 10px;margin-right: 10px; }
+        .send:after,.show:after,.msg:after{  content: "";  clear: both;  display: table;  }
+
+        .msg>img{  width: 30px;  height: 30px;  float: left;  border-radius:50%;  }
+        .msg>p{  float: left;  margin:0  10px;  padding: 10px;  background: #fff;  position: relative;  border-radius: 5px;  max-width:400px;  box-sizing: border-box;  }
+        .msg p>img{  max-width:400px;  max-height:400px;  }
+        .show .msg img,.show .msg p,.show .msg{  float: right;  }
+        .show .msg p{background: #b2e281}
+        .send,.show{  padding-bottom: 10px;  }
+        .textdiv{
+        	/*border: 1px solid #ccc;*/
+        	top: 5px;
+        	position: absolute;
+        	left: 45px;
+        	right: 110px;
+        	height: 100%;
+        }
+        .textdiv textarea{
+        	resize: none;
+        	box-sizing: border-box;
+        	width:100%;
+        	padding:10px;
+        	height: 50px;
+        	border-radius: 5px;
+        	border:1px solid #ddd;
+        	vertical-align:middle;
+        	font-size:14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="lefter">
+        <ul>
+            <li><img src="http://wx.qlogo.cn/mmopen/4Uz7uMXYrlBegIajgd8d2crD8waibv2GL62ePU6zUjzhic3BQ95bptJ4MTyia1a3ezR3MG4oNxRnNSJ1gszy04RHJafYQN9c9dC/0">幸福满天下</li>
+            <li><img src="http://jiuquandata.b0.upaiyun.com/298f6681850629be72ecc31f4b53f59b.jpg">东方红</li>
+            <li><img src="http://jiuquandata.b0.upaiyun.com/298f6681850629be72ecc31f4b53f59b.jpg">东方红</li>
+
+        </ul>
+    </div>
+    <div class="righter">
+        <p class="header">正在与 幸福满天下 对话</p>
+    	<div class="message">
+            <div class="show"><div class="time">下午3:03:22</div><div class="msg"><img src="http://jiuquandata.b0.upaiyun.com/298f6681850629be72ecc31f4b53f59b.jpg"><p>管理员的发话</p></div></div>
+            <div class="send"><div class="time">下午3:03:22</div><div class="msg"><img src="http://wx.qlogo.cn/mmopen/4Uz7uMXYrlBegIajgd8d2crD8waibv2GL62ePU6zUjzhic3BQ95bptJ4MTyia1a3ezR3MG4oNxRnNSJ1gszy04RHJafYQN9c9dC/0"><p><img src="http://182.92.4.52:80/jiuquan/jiuquan/chatfiles/4f2ac580-8d51-11e7-8f6c-1f69e88c01bf"></p></div></div>
+            <div class="show"><div class="time">下午3:03:22</div><div class="msg"><img src="http://jiuquandata.b0.upaiyun.com/298f6681850629be72ecc31f4b53f59b.jpg"><p>管理员的发话</p></div></div>
+            <div class="send"><div class="time">下午3:03:22</div><div class="msg"><img src="http://wx.qlogo.cn/mmopen/4Uz7uMXYrlBegIajgd8d2crD8waibv2GL62ePU6zUjzhic3BQ95bptJ4MTyia1a3ezR3MG4oNxRnNSJ1gszy04RHJafYQN9c9dC/0"><p>用户对话</p></div></div>
+            <div class="show"><div class="time">下午3:03:22</div><div class="msg"><img src="http://jiuquandata.b0.upaiyun.com/298f6681850629be72ecc31f4b53f59b.jpg"><p>管理员的发话</p></div></div>
+            <div class="send"><div class="time">下午3:03:22</div><div class="msg"><img src="http://wx.qlogo.cn/mmopen/4Uz7uMXYrlBegIajgd8d2crD8waibv2GL62ePU6zUjzhic3BQ95bptJ4MTyia1a3ezR3MG4oNxRnNSJ1gszy04RHJafYQN9c9dC/0"><p><img src="http://182.92.4.52:80/jiuquan/jiuquan/chatfiles/4f2ac580-8d51-11e7-8f6c-1f69e88c01bf"></p></div></div>
+    	</div>
+    	<div class="footer">
+    		<img src="/im/jiuquan/images/xiaolian.png" alt="" />
+    		<div class="textdiv">
+    			<textarea></textarea>
+    		</div>
+    		<span>发送</span>
+    	</div>
+    </div>
+    <div style="clear: both;"></div>
+</body>
+</html>

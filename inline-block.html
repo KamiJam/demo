@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--css规范规定，被inline-block的行内盒子，其bseline就是其父元素的最后一个行内盒子的baseline-->
+		<div style="position:absolute;left:0;top:0;background:black;color:white;font-size:24px;">
+    <span style="background:red;margin:0;">
+    <span>sss</span><span style="overflow:hidden;display:inline-block;background:blue;">ssfdfdfdfdfdfdfdfdfds</span>sss
+            </span>
+        </div>
+	</body>
+</html>

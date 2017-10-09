@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+<style>
+	.swiper-container {
+	    width: 100%;
+	}  
+	.sw-fullimg{
+		width: 100%;
+		/*height: 100%;*/
+	}
+</style>
+</head>
+<body>
+
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <a class="swiper-slide" href="">
+	        	<img data-src="images/1.jpg" class="swiper-lazy sw-fullimg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+	        </a>
+	        <a class="swiper-slide">
+	        	<img data-src="images/2.jpg" class="swiper-lazy sw-fullimg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+	        </a>
+	        <a class="swiper-slide">
+	        	<img data-src="images/3.jpg" class="swiper-lazy sw-fullimg">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+	        </a>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- 如果需要导航按钮 -->
+	    <!--<div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>-->
+	    
+	    <!-- 如果需要滚动条 -->
+	    <!--<div class="swiper-scrollbar"></div>-->
+	</div>
+	
+	<script src="js/jquery-1.9.1.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.jquery.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+	var mySwiper = new Swiper ('.swiper-container', {
+	    loop: true,
+	    pagination: '.swiper-pagination',
+		autoplay: 3000,
+	    preloadImages: false,
+        lazyLoading: true
+	});
+    </script>
+</body>
+</html>

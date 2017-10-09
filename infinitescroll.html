@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+    $(function (){
+        var url = "/index.php?g=Wap&m=Index&a=queryArticle&token=hslyqb1504510564";
+
+        var stop=true;
+        var flag=0;
+
+        $(window).scroll(function(){
+            
+            var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop()); 
+            if(($(document).height() <= totalheight + 50) && ($(window).scrollTop()>50)){
+                if(stop==true){
+                    $('#Loading').css('display','block');
+
+                    var aid = $('div.conList:last').attr('data');
+
+                    stop=false;
+                    $.get(url,{aid:aid},function (res){
+
+                        $('#Loading').css('display','none');
+
+                        stop=true;
+
+                        if(res.err=='0'){
+                            $('section.conListbox').append(res.data);
+                        }else{
+                            if(flag==0){
+                                $('#Loading').remove();
+                                $('div.more').fadeIn(2000).fadeOut(2000);
+                                flag=1;
+                            }
+                        }
+
+                    },'json');
+                }
+            }
+        });
+    });
+    
+		</script>
+	</body>
+</html>

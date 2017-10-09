@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title></title>
+		<style>
+			.redcircle{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				background-color: red;
+				position: absolute;
+			}
+			.bor{
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>	
+		<!--<div>
+			<span>
+				<span>testline</span>
+				<i class="redcircle"></i>
+			</span>
+		</div>
+		<div>
+			<span>
+				<span>testline</span><i class="redcircle"></i>
+			</span>
+		</div>-->
+		<!--表现一致-->
+		
+		<!--<div>
+			<div>
+				<span>testline</span>
+				<i class="redcircle"></i>
+			</div>
+		</div>
+		<div>
+			<div>
+				<span>testline</span><i class="redcircle"></i>
+			</div>
+		</div>-->
+		<!--表现一致-->
+		
+		<div>
+			<div class="bor">
+				<span>testline</span><i class="redcircle"></i>
+			</div>
+		</div>
+		<br><br>
+		<div>
+			<div class="bor" >
+				<span>testline</span>
+				<i class="redcircle"></i>
+			</div>
+		</div>
+		<!--表现不一-->
+
+	</body>
+</html>

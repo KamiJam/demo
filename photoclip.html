@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="clipArea"></div>
+		<input type="file" id="file" />
+		...
+		<script src="js/iscroll-zoom.js"></script>
+		<script src="js/hammer.min.js"></script>
+		<script src="js/lrz.all.bundle.js"></script>
+		<script src="js/PhotoClip.min.js"></script>
+		<script>
+		var pc = new PhotoClip('#clipArea');
+		file.addEventListener('change', function() {
+			pc.load(this.files[0]);
+		});
+		</script>
+	</body>
+</html>

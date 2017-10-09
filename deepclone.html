@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function getclass(o){
+				if(o===null) return "null";
+			    if(o===undefined) return "undefined";
+			    return Object.prototype.toString.call(o).slice(8,-1).toLowerCase();
+			}
+			function deepClone(obj){
+				var result,objClass = getclass(obj);
+				if(objClass == "object"){
+					result = {};
+				}else if(objClass == "array"){
+					result = [];
+				}else{
+					return obj;
+				}
+				for(key in obj){
+					var copy = obj[key];
+					result[key] = deepClone(copy);
+				}
+				return result;
+			}
+			var oPerson={
+			    oName:"rookiebob",
+			    oAge:"18",
+			    oAddress:{
+			        province:"beijing"
+			    },    
+			    ofavorite:[
+			        "swimming",
+			        {reading:"history book"}
+			    ],
+			    skill:function(){
+			        console.log("bob is coding");
+			    }
+			};
+			
+			var nobj  = deepClone(oPerson);
+			nobj.oName = "new";
+			console.log(oPerson.oName);
+			nobj.oAddress= [1];
+			console.log(oPerson.oAddress);
+		</script>
+	</body>
+</html>

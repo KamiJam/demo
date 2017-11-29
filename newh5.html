@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <h1>你好：<span id="target">世界</span></h1>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        //视图 
+        var view = document.getElementById('target');
+
+        //数据 
+        var data = { name: 's' };
+
+        //视图和数据进行关联
+        Object.defineProperty(data, 'name', {
+            get: function() {
+                return view.innerHTML;
+            },
+            set: function(val) {
+                view.innerHTML = val;
+            }
+        });
+        //修改测试 
+        var timer = setTimeout(function() {
+            //数据发生改变 
+            data.name = 'world';
+        }, 3000);
+    });
+    </script>
+</body>
+
+</html>

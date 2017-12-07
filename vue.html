@@ -16,7 +16,8 @@
 
 <body>
 	<div id="app">
-		{{message}}
+		<span>{{message}}</span>
+		
 
 		<p v-bind:title="date">
 		    鼠标悬停几秒钟查看此处动态绑定的提示信息！
@@ -42,13 +43,22 @@
   			v-bind:todos="item"
   			v-bind:key="item.id"></todo-item>
   		</ul>
+
+  		<p>
+  			<span v-html="rawHtml"></span>
+  		</p>
 	</div>
 
 	<script src="https://unpkg.com/vue"></script>
 	<script type="text/javascript">
 		Vue.component('todo-item',{
 			props: ['todos'],
-			template: '<li :data-id="todos.id">{{todos.text}}</li>'
+			template: '<li :data-id="makeid(todos.id)">{{todos.text}}</li>',
+			methods: {
+				makeid: function(id){
+					return "_id"+id;
+				}
+			}
 		});
 
 		var app = new Vue({
@@ -67,10 +77,11 @@
 					}
 				],
 				groceryList: [
-			      { id: 0, text: '蔬菜' },
-			      { id: 1, text: '奶酪' },
-			      { id: 2, text: '随便其他什么人吃的东西' }
-			    ]							
+			      	{ id: 0, text: '蔬菜' },
+			      	{ id: 1, text: '奶酪' },
+			      	{ id: 2, text: '随便其他什么人吃的东西' }
+			    ],
+			    rawHtml: '<span style="color: red">This should be red.</span>'						
 			}
 			,methods:{
 				task1: function(){

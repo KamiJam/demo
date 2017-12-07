@@ -27,6 +27,7 @@
 			    $('.content').dropload({
 			        scrollArea : window,
 			        loadDownFn : function(me){
+						window.infiniteList = me;
 			            page++;
 			            // 拼接HTML
 			            var result = '';
@@ -57,12 +58,12 @@
 			                        $('.list').append(result);
 			                        // 每次数据插入，必须重置
 			                        me.resetload();
-			                        $("img").on("load",function(){
-			                        	var that = this;
-			                        	setTimeout(function(){
-			                        		$(that).css('height',$(that).height()-30);
-			                        	},300);
-			                        })
+			                        // $("img").on("load",function(){
+			                        // 	var that = this;
+			                        // 	setTimeout(function(){
+			                        // 		$(that).css('height',$(that).height()-30);
+			                        // 	},300);
+			                        // })
 			                        
 //			                        $("body").on('click','.dropload-down',function(){
 //			                        	me.unlock();

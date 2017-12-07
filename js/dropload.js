@@ -45,7 +45,7 @@
                 domClass   : 'dropload-down',
                 domRefresh : '<div class="dropload-refresh">↑点击加载更多</div>',
                 domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
-                domNoData  : '<div class="dropload-noData">暂无数据</div>'
+                domNoData  : '<div class="dropload-noData">已无更多数据</div>'
             },
             autoLoad : true,                                                     // 自动加载
             distance : 50,                                                       // 拉动距离
@@ -80,6 +80,7 @@
             me._scrollContentHeight = me.$element[0].scrollHeight;
             me._scrollWindowHeight = me.$element.height();
         }
+        
         fnAutoLoad(me);
 
         // 窗口调整
@@ -119,8 +120,7 @@
         // 加载下方
         me.$scrollArea.on('scroll',function(){
             me._scrollTop = me.$scrollArea.scrollTop();
-			
-//			console.log(me._scrollContentHeight - me._threshold,me._scrollWindowHeight + me._scrollTop);
+			console.log(me._scrollContentHeight - me._threshold,me._scrollWindowHeight + me._scrollTop);
             // 滚动页面触发加载数据 debugger
             if(me.opts.loadDownFn != '' && !me.loading && !me.isLockDown && (me._scrollContentHeight - me._threshold) <= (me._scrollWindowHeight + me._scrollTop)){
                 loadDown(me);
@@ -128,7 +128,7 @@
         });
         
         
-        $("body").on('click','.dropload-down,.dropload-noData',function(){
+        $("body").on('click','.dropload-refresh',function(){
 //      	console.log(1);
         	me.unlock();
         	me.resetload();
